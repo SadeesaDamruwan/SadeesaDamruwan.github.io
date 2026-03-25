@@ -3,97 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadeesa Damruwan | Mobile & AI Developer</title>
+    <title>Sadeesa Damruwan | Mobile & AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #a3a3a3; font-family: 'Plus Jakarta Sans', sans-serif; }
+        :root { --bg: #080808; --card-bg: #111111; --accent: #3b82f6; }
+        body { background-color: var(--bg); color: #999; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .text-white-bright { color: #f5f5f5; }
-        .hover-link:hover { color: #ffffff; border-bottom: 1px solid #ffffff; }
-        .fade-in { animation: fadeIn 1s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .text-white { color: #ffffff; }
+        
+        /* Card Styles */
+        .bento-card { 
+            background: var(--card-bg); 
+            border: 1px solid rgba(255,255,255,0.05); 
+            border-radius: 1.5rem; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .bento-card:hover { 
+            border-color: rgba(59, 130, 246, 0.5); 
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="p-6 md:p-32 max-w-5xl mx-auto selection:bg-white selection:text-black">
+<body class="selection:bg-blue-500/30">
 
-    <header class="fade-in">
-        <div class="flex items-center gap-2 mb-6">
-            <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span class="mono text-[10px] uppercase tracking-[0.2em] text-gray-500">Available for innovative projects</span>
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center mix-blend-difference">
+        <span class="mono text-xs font-bold tracking-tighter text-white">S.D / 26</span>
+        <div class="flex gap-8 mono text-[10px] uppercase tracking-widest">
+            <a href="#work" class="hover:text-white transition-colors">Work</a>
+            <a href="#about" class="hover:text-white transition-colors">About</a>
+            <a href="mailto:sadisazoome@gmail.com" class="hover:text-white transition-colors">Contact</a>
         </div>
-        <h1 class="text-5xl font-semibold text-white-bright tracking-tight mb-4">Sadeesa Damruwan</h1>
-        <h2 class="mono text-sm text-blue-500 mb-8 tracking-wide">Mobile Development & AI Specialist</h2>
-        <p class="max-w-xl text-lg leading-relaxed">
-            I bridge the gap between complex <span class="text-white-bright">Artificial Intelligence</span> and seamless <span class="text-white-bright">Mobile Experiences</span>. Based in Anuradhapura, building the future of intelligent applications.
-        </p>
-    </header>
+    </nav>
 
-    <main class="mt-28 fade-in" style="animation-delay: 0.2s;">
-        <div class="flex justify-between items-end border-b border-white/10 pb-4 mb-12">
-            <h3 class="mono text-[11px] uppercase tracking-[0.3em] text-gray-600">Selected Works</h3>
-            <span class="mono text-[10px] text-gray-700">2023 — 2026</span>
-        </div>
+    <main class="max-w-6xl mx-auto px-6 pt-40 pb-20">
         
-        <div class="grid grid-cols-1 gap-16">
-            <div class="group cursor-pointer">
-                <div class="flex flex-col md:flex-row md:items-start justify-between">
-                    <div class="max-w-lg">
-                        <a href="https://github.com/SadeesaDamruwan/MedScribe" class="text-2xl font-medium text-white-bright group-hover:text-blue-400 transition-colors inline-block mb-3">
-                            MedScribe <span class="text-gray-600 text-sm ml-2">↗</span>
+        <section class="mb-32">
+            <h1 class="text-6xl md:text-8xl font-medium tracking-tight text-white mb-8 gradient-text">
+                Architecting <br>Intelligent Mobility.
+            </h1>
+            <p class="max-w-xl text-lg md:text-xl leading-relaxed">
+                I am <span class="text-white">Sadeesa Damruwan</span>, a developer specializing in the intersection of <span class="text-blue-500">Mobile Systems</span> and <span class="text-blue-500">Machine Learning</span>. Currently building context-aware applications in Sri Lanka.
+            </p>
+        </section>
+
+        <section id="work" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bento-card md:col-span-2 p-8 flex flex-col justify-between min-h-[400px]">
+                <div>
+                    <div class="flex justify-between items-start mb-12">
+                        <span class="px-3 py-1 rounded-full border border-blue-500/30 text-blue-400 mono text-[10px] uppercase">AI / NLP Engine</span>
+                        <a href="https://github.com/SadeesaDamruwan/MedScribe" class="text-white hover:text-blue-400 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
-                        <p class="text-sm leading-relaxed mb-4">An intelligent medical transcription engine utilizing NLP to convert clinical dialogue into structured digital records. Optimized for mobile deployment.</p>
-                        <div class="flex gap-3">
-                            <span class="mono text-[10px] px-2 py-1 bg-white/5 rounded text-gray-400">Natural Language Processing</span>
-                            <span class="mono text-[10px] px-2 py-1 bg-white/5 rounded text-gray-400">Python</span>
-                        </div>
+                    </div>
+                    <h3 class="text-3xl text-white font-medium mb-4">MedScribe</h3>
+                    <p class="text-gray-400 max-w-sm">Automating clinical documentation using Speech-to-Text and NLP. Designed for high-reliability medical environments.</p>
+                </div>
+                <div class="flex gap-4 mono text-[10px] mt-8 text-gray-500">
+                    <span>Python</span> <span>PyTorch</span> <span>FastAPI</span>
+                </div>
+            </div>
+
+            <div class="bento-card p-8 flex flex-col justify-between">
+                <div>
+                    <span class="px-3 py-1 rounded-full border border-white/10 text-gray-500 mono text-[10px] uppercase">Mobile Health</span>
+                    <h3 class="text-2xl text-white font-medium mt-12 mb-4">AnimalCare</h3>
+                    <p class="text-sm leading-relaxed">Predictive diagnostics for veterinary care using on-device ML models.</p>
+                </div>
+                <div class="mono text-[10px] text-gray-500">Mobile First • Data Science</div>
+            </div>
+
+            <div class="bento-card p-8 flex flex-col justify-between">
+                <div>
+                    <span class="px-3 py-1 rounded-full border border-white/10 text-gray-500 mono text-[10px] uppercase">Security</span>
+                    <h3 class="text-2xl text-white font-medium mt-12 mb-4">PhishKill</h3>
+                    <p class="text-sm leading-relaxed">Real-time phishing detection for mobile browsers using ensemble learning.</p>
+                </div>
+                <div class="mono text-[10px] text-gray-500">Cybersecurity • Scikit-learn</div>
+            </div>
+
+            <div class="bento-card md:col-span-2 p-8">
+                <h3 class="mono text-[10px] uppercase tracking-widest text-gray-600 mb-8">Core Competencies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-white text-sm mb-2">Mobile</h4>
+                        <ul class="text-xs space-y-1"><li>Flutter</li><li>React Native</li><li>Android SDK</li></ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm mb-2">Intelligence</h4>
+                        <ul class="text-xs space-y-1"><li>TensorFlow</li><li>OpenCV</li><li>NLP</li></ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm mb-2">Backend</h4>
+                        <ul class="text-xs space-y-1"><li>Node.js</li><li>Python/Flask</li><li>Firebase</li></ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm mb-2">Tools</h4>
+                        <ul class="text-xs space-y-1"><li>Git / CI-CD</li><li>Docker</li><li>AWS</li></ul>
                     </div>
                 </div>
             </div>
 
-            <div class="group cursor-pointer">
-                <div class="flex flex-col md:flex-row md:items-start justify-between">
-                    <div class="max-w-lg">
-                        <a href="https://github.com/SadeesaDamruwan/AnimalCare" class="text-2xl font-medium text-white-bright group-hover:text-blue-400 transition-colors inline-block mb-3">
-                            AnimalCare Mobile <span class="text-gray-600 text-sm ml-2">↗</span>
-                        </a>
-                        <p class="text-sm leading-relaxed mb-4">A comprehensive animal health monitoring ecosystem. Implementing computer vision to detect early symptoms of common pet ailments.</p>
-                        <div class="flex gap-3">
-                            <span class="mono text-[10px] px-2 py-1 bg-white/5 rounded text-gray-400">Mobile Dev</span>
-                            <span class="mono text-[10px] px-2 py-1 bg-white/5 rounded text-gray-400">Computer Vision</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </section>
 
-            <div class="group cursor-pointer">
-                <div class="flex flex-col md:flex-row md:items-start justify-between">
-                    <div class="max-w-lg">
-                        <a href="https://github.com/SadeesaDamruwan/PhishKill" class="text-2xl font-medium text-white-bright group-hover:text-blue-400 transition-colors inline-block mb-3">
-                            PhishKill <span class="text-gray-600 text-sm ml-2">↗</span>
-                        </a>
-                        <p class="text-sm leading-relaxed mb-4">Advanced phishing detection tool using machine learning classifiers to analyze and neutralize malicious mobile web content.</p>
-                        <div class="flex gap-3">
-                            <span class="mono text-[10px] px-2 py-1 bg-white/5 rounded text-gray-400">Cybersecurity</span>
-                            <span class="mono text-[10px] px-2 py-1 bg-white/5 rounded text-gray-400">ML</span>
-                        </div>
-                    </div>
-                </div>
+        <footer class="mt-40 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="mono text-[10px]">© 2026 Developed by Sadeesa Damruwan</p>
+            <div class="flex gap-6 mono text-[10px]">
+                <a href="https://github.com/SadeesaDamruwan" class="hover:text-white uppercase transition-colors">Github</a>
+                <a href="#" class="hover:text-white uppercase transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white uppercase transition-colors">Resume</a>
             </div>
-        </div>
+        </footer>
+
     </main>
-
-    <footer class="mt-40 mb-20 fade-in" style="animation-delay: 0.4s;">
-        <div class="border-t border-white/10 pt-12">
-            <h4 class="mono text-[11px] uppercase tracking-[0.3em] text-gray-600 mb-8">Get in Touch</h4>
-            <div class="flex flex-wrap gap-x-12 gap-y-6">
-                <a href="mailto:sadisazoome@gmail.com" class="text-white-bright hover-link mono text-sm transition-all">Email</a>
-                <a href="https://github.com/SadeesaDamruwan" class="text-white-bright hover-link mono text-sm transition-all">GitHub</a>
-                <a href="#" class="text-white-bright hover-link mono text-sm transition-all">LinkedIn</a>
-                <a href="#" class="text-white-bright hover-link mono text-sm transition-all">CV_2026.pdf</a>
-            </div>
-        </div>
-    </footer>
 
 </body>
 </html>
