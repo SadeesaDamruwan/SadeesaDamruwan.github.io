@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadeesa Damruwan | Mobile & AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #161616;
+            --border: #262626;
+            --text-main: #e2e8f0;
+            --accent: #3b82f6;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text-main); scroll-behavior: smooth; }
+        .mono { font-family: 'Roboto Mono', monospace; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .project-card { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border); 
+            border-radius: 24px; 
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .project-img-slot {
+            height: 280px; 
+            background: radial-gradient(circle at center, #1e1e1e 0%, #111 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .project-img-slot img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; 
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: float 4s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .project-img-slot::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: var(--accent);
+            filter: blur(80px);
+            border-radius: 50%;
+            animation: glow 6s infinite;
+            z-index: 0;
+        }
+
+        .project-card:hover { 
+            border-color: var(--accent);
+            transform: translateY(-8px) scale(1.01);
+        }
+
+        .profile-img-dark {
+            border: 8px solid var(--card-bg);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-xl z-50 border-b border-white/5 px-8 py-6 flex justify-between items-center">
+        <span class="font-bold text-xl tracking-tighter text-blue-500">SADEESA.</span>
+        <div class="hidden md:flex gap-10 text-[11px] uppercase tracking-[0.2em] font-semibold text-slate-400">
+            <a href="#work" class="hover:text-white transition">Projects</a>
+            <a href="mailto:msdamruwanofficial@gmail.com" class="hover:text-white transition">Contact</a>
+            <a href="https://github.com/SadeesaDamruwan" class="hover:text-white transition">GitHub</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-48">
+        
+        <section class="flex flex-col md:flex-row items-center gap-20 mb-48">
+            <div class="md:w-3/5 space-y-8">
+                <div class="inline-block px-4 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 mono text-[10px] text-blue-400 uppercase tracking-widest">
+                    Mobile & AI Specialist
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold leading-[0.95] tracking-tight text-white">
+                    Sadeesa <br>Damruwan.
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed">
+                    Based in Sri Lanka. I bridge the gap between <span class="text-white">Machine Learning</span> and intuitive <span class="text-white">Mobile Interfaces</span>.
+                </p>
+                <div class="pt-6">
+                    <a href="#work" class="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20">View Work</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 flex justify-center">
+                <img src="/images/IMG_2923.JPG" alt="Sadeesa" class="w-80 h-80 rounded-full profile-img-dark object-cover">
+            </div>
+        </section>
+
+        <section id="work" class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-48">
+            
+            <div class="project-card group">
+                <div class="project-img-slot">
+                    <img src="/images/IMG_4131.jpg" alt="Clothing AI" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden text-slate-700 mono text-[10px] uppercase tracking-[0.3em] z-10">Image Pending</span>
+                </div>
+                <div class="p-10">
+                    <div class="flex gap-2 mb-4"><span class="skill-tag">AI Vision</span></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Clothing AI</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Deep learning vision system for fashion classification and analysis.</p>
+                    <a href="https://github.com/SadeesaDamruwan/Cloathing_Ai.git" class="text-blue-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Source Code <span>→</span></a>
+                </div>
+            </div>
+
+            <div class="project-card group">
+                <div class="project-img-slot">
+                    <img src="/images/Screenshot 2026-03-26 at 10.25.12 (2).png" alt="Hotel System" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden text-slate-700 mono text-[10px] uppercase tracking-[0.3em] z-10">Image Pending</span>
+                </div>
+                <div class="p-10">
+                    <div class="flex gap-2 mb-4"><span class="skill-tag">Full Stack</span></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Hotel System 02</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Full-stack administrative platform for hospitality and guest management.</p>
+                    <a href="https://github.com/SadeesaDamruwan/Hotel-management-system_02.git" class="text-blue-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Source Code <span>→</span></a>
+                </div>
+            </div>
+
+            <div class="project-card group">
+                <div class="project-img-slot">
+                    <img src="/images/Screenshot 2026-03-26 at 10.23.38 (2).png" alt="Student Management" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden text-slate-700 mono text-[10px] uppercase tracking-[0.3em] z-10">Image Pending</span>
+                </div>
+                <div class="p-10">
+                    <div class="flex gap-2 mb-4"><span class="skill-tag">Database</span></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Student Management</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Educational record system focusing on persistent data and student lifecycle tracking.</p>
+                    <a href="https://github.com/SadeesaDamruwan/Student_Management.git" class="text-blue-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Source Code <span>→</span></a>
+                </div>
+            </div>
+
+            <div class="project-card group">
+                <div class="project-img-slot">
+                    <img src="/images/Screenshot 2026-03-26 at 10.22.33 (2).png" alt="CatchTheBox" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden text-slate-700 mono text-[10px] uppercase tracking-[0.3em] z-10">Image Pending</span>
+                </div>
+                <div class="p-10">
+                    <div class="flex gap-2 mb-4"><span class="skill-tag">Game Logic</span> <span class="skill-tag">Java/C#</span></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">CatchTheBox</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">An interactive logic-based project focusing on collision detection and dynamic movement mechanics.</p>
+                    <a href="https://github.com/SadeesaDamruwan/CatchTheBox" class="text-blue-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Source Code <span>→</span></a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="bg-[#050505] py-32 px-8 border-t border-white/5 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's collaborate.</h2>
+        <div class="flex justify-center gap-12 text-sm mono font-bold tracking-widest text-slate-400 uppercase mb-24">
+            <a href="mailto:msdamruwanofficial@gmail.com" class="hover:text-blue-500 transition">Email</a>
+            <a href="https://github.com/SadeesaDamruwan" class="hover:text-white transition">Github</a>
+            <a href="https://www.linkedin.com/in/sadeesa-damruwan/" class="hover:text-white transition">LinkedIn</a>
+        </div>
+        <div class="text-[9px] uppercase tracking-[0.4em] text-slate-700 font-bold">
+            <p>© 2026 Sadeesa Damruwan</p>
+        </div>
+    </footer>
+
+</body>
+</html>
