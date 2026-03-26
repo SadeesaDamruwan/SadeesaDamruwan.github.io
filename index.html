@@ -38,7 +38,7 @@
         }
 
         .project-img-slot {
-            height: 280px; 
+            height: 280px;
             background: radial-gradient(circle at center, #1e1e1e 0%, #111 100%);
             display: flex;
             align-items: center;
@@ -48,10 +48,11 @@
             padding: 20px;
         }
 
+        /* FIX: Ensures tall images (like Clothing AI) fit inside the box */
         .project-img-slot img {
             max-width: 90%;
             max-height: 90%;
-            object-fit: contain; 
+            object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             animation: float 4s ease-in-out infinite;
@@ -90,6 +91,16 @@
             font-weight: 600;
             text-transform: uppercase;
         }
+
+        .tech-pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .tech-pill:hover {
+            border-color: var(--accent);
+            background: rgba(59, 130, 246, 0.05);
+        }
     </style>
 </head>
 <body class="selection:bg-blue-500/30">
@@ -97,6 +108,7 @@
     <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-xl z-50 border-b border-white/5 px-8 py-6 flex justify-between items-center">
         <span class="font-bold text-xl tracking-tighter text-blue-500">SADEESA.</span>
         <div class="hidden md:flex gap-10 text-[11px] uppercase tracking-[0.2em] font-semibold text-slate-400">
+            <a href="#about" class="hover:text-white transition">About</a>
             <a href="#work" class="hover:text-white transition">Projects</a>
             <a href="mailto:msdamruwanofficial@gmail.com" class="hover:text-white transition">Contact</a>
             <a href="https://github.com/SadeesaDamruwan" class="hover:text-white transition">GitHub</a>
@@ -125,6 +137,38 @@
             </div>
         </section>
 
+        <section id="about" class="mb-48 border-y border-white/5 py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h2 class="mono text-[10px] text-blue-500 uppercase tracking-[0.5em] mb-8">01. Background</h2>
+                    <p class="text-3xl font-light leading-relaxed text-slate-200">
+                        I am a <span class="text-white font-medium">Mobile & AI Engineer</span> dedicated to building intelligent applications that feel natural. 
+                    </p>
+                    <p class="mt-6 text-slate-400 leading-relaxed">
+                        Currently based in Sri Lanka, I specialize in integrating complex Machine Learning models into sleek, high-performance mobile environments. My goal is to make AI accessible and invisible through great UX.
+                    </p>
+                </div>
+                
+                <div class="space-y-8">
+                    <h2 class="mono text-[10px] text-blue-500 uppercase tracking-[0.5em] mb-8">02. Tech Stack</h2>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill px-5 py-2 rounded-xl text-xs font-medium">Flutter / Dart</span>
+                        <span class="tech-pill px-5 py-2 rounded-xl text-xs font-medium">Python / PyTorch</span>
+                        <span class="tech-pill px-5 py-2 rounded-xl text-xs font-medium">TensorFlow Lite</span>
+                        <span class="tech-pill px-5 py-2 rounded-xl text-xs font-medium">Firebase</span>
+                        <span class="tech-pill px-5 py-2 rounded-xl text-xs font-medium">Computer Vision</span>
+                        <span class="tech-pill px-5 py-2 rounded-xl text-xs font-medium">Node.js</span>
+                    </div>
+                    
+                    <div class="p-8 rounded-3xl bg-blue-600/5 border border-blue-500/10 mt-8">
+                        <p class="text-sm italic text-blue-200/70 leading-relaxed">
+                            "The best AI doesn't feel like a tool; it feels like an extension of the user's intent."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="work" class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-48">
             
             <div class="project-card group">
@@ -147,7 +191,7 @@
                 </div>
                 <div class="p-10">
                     <div class="flex gap-2 mb-4"><span class="skill-tag">Full Stack</span></div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Hotel System </h3>
+                    <h3 class="text-2xl font-bold text-white mb-4">Hotel System 02</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-8">Full-stack administrative platform for hospitality and guest management.</p>
                     <a href="https://github.com/SadeesaDamruwan/Hotel-management-system_02.git" class="text-blue-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Source Code <span>→</span></a>
                 </div>
